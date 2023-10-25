@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+	
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.11">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	
+		<PackageReference Include="NSwag.AspNetCore" Version="13.20.0" />
+	
+	
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Infra\Infrastructure\Infrastructure.csproj" />
+		<ProjectReference Include="..\..\Infra\MSSQL.Migrator\MSSQL.Migrator.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="wwwroot\api\" />
+	</ItemGroup>
+
+</Project>
